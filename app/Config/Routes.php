@@ -37,22 +37,11 @@ $routes->post("autenticar", "Ajax\Autenticacion::autenticar");
 
 $routes->group('backoffice', ['filter' => 'authGuard'], function ($routes) {
     $routes->add('/', 'Panel::index');
-    // $routes->add('producto/listado', 'Producto::index');
-    // $routes->add('producto/crear', 'Producto::crear');
     $routes->add('cliente/listado', 'Cliente::index');
     $routes->add('cliente/crear', 'Cliente::crear');
     
     // horarios
     $routes->add('horarios/crear', 'Horarios::index');
-
-    // $routes->add('producto/gestionar', 'Producto::crear');
-    // $routes->add('producto/editar', 'Producto::obtenerProducto');
-
-    // clientes
-    // $routes->add('cliente/listado', 'Cliente::index');
-    // $routes->add('cliente/gestionar', 'Cliente::crear');
-    // $routes->add('cliente/editar', 'Cliente::obtenerCliente');
-    // $routes->add('cliente/reasignar', 'Cliente::reasignar');
 
 });
 
